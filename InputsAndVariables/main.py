@@ -2,7 +2,7 @@ from functions import *
 from exercise_3 import *
 
 # # Exercise Set 1
-get_data()
+# get_data()
 
 # Exercise Set 2
 # Set 1
@@ -14,4 +14,8 @@ get_data()
 
 # Exercise Set 3
 # add_wow();
+
+# Set 4
+# Exercise 1
+enterHeight()
 

@@ -31,3 +31,14 @@ def add_wow():
     user_address = input('What is your home address?\n')
 
     print(placeholder, user_hobby, 'is really interesting. You live in', user_address)
+
+
+def enterHeight ():
+    min_height = 2
+
+    user_height = float(input("Enter your height in metres:"))
+
+    user_difference = round(float(min_height - user_height), 3)
+
+    print("You are {:0.2f} metres short of {} metres".format(user_difference, min_height))
+
