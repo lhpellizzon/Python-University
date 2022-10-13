@@ -174,3 +174,15 @@
 #         print(result)
 #
 # user_input()
+
+
+# Exercise 11
+# -------------------->
+# def transform_to_html():
+#     user_tag = input("Please, enter a HTML tag here:\n")
+#     user_content = input("Please, enter the content you want to put inside the tag here:\n")
+#     result = f"<{user_tag}>{user_content}</{user_tag}>"
+#
+#     print(result)
+#
+# transform_to_html()
