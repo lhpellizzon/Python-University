@@ -131,4 +131,46 @@
 # user_input()
 
 
+# Exercise 7 replace second char in a string
+# -------------------->
+# def user_input():
+#     user_value = input("Enter a message here:\n")
+#     result  = user_value[-1] + user_value[1:len(user_value)-1] + user_value[0]
+#
+#     print(result)
+#
+# user_input()
 
+
+# Exercise 8 upper to lower vice versa
+# -------------------->
+# def user_input():
+#     user_value = input("Enter message here:\n")
+#     result = user_value.swapcase();
+#
+#     print(result)
+#
+# user_input()
+
+# Exercise 9 swap words
+# -------------------->
+# def user_input():
+#     user_value = input("Enter message here with two words:\n")
+#     result = " ".join(reversed(user_value.split(" ")))
+#
+#     print(result)
+#
+# user_input()
+
+# Exercise 10 remove from index
+# -------------------->
+# def user_input():
+#         user_string = input("Please, enter message here:\n")
+#         user_index = int(input("Please, enter the index NUMBER you want to remove from the message:\n"))
+#
+#         to_remove = user_string[user_index]
+#         result = user_string.replace(to_remove, "")
+#
+#         print(result)
+#
+# user_input()
