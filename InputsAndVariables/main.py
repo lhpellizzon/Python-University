@@ -17,5 +17,15 @@ from exercise_3 import *
 
 # Set 4
 # Exercise 1
-enterHeight()
+# enter_height()
+
+# Exercise 2
+# calc_journey();
+
+
+# Exercise 3
+# week_hours()
+
+# Exercise 4
+
 

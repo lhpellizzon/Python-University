@@ -33,7 +33,7 @@ def add_wow():
     print(placeholder, user_hobby, 'is really interesting. You live in', user_address)
 
 
-def enterHeight ():
+def enter_height():
     min_height = 2
 
     user_height = float(input("Enter your height in metres:"))
@@ -42,3 +42,28 @@ def enterHeight ():
 
     print("You are {:0.2f} metres short of {} metres".format(user_difference, min_height))
 
+
+def calc_journey():
+    distance = int(input("What is the distance of your journey in kilometres?\n"))
+    speed = int(
+        input("How fast would you like to travel im km/hour? (Keep in mind you need arrive safe at the destination\n"))
+    fuel_distance = int(input("How much does your car run using one litre of gasoline?\n"))
+    fuel_cost = int(input("How much does 1 litre os gasoline cost?\n"))
+
+    full_journey = distance / speed
+    full_cost = (distance / fuel_distance) * fuel_cost
+    print("Your journey will take {} hours and will cost {} euros".format(full_journey, full_cost))
+
+
+def week_hours():
+    paid_per_hour = 19.45
+    overtime_rate = 1.5
+    user_hours = int(input("How many do you normally work every week?\n"))
+    user_overtime = int(input("How many hours did you worked overtime?\n"))
+
+    normal_pay = user_hours * paid_per_hour
+    total_overtime = user_overtime * (paid_per_hour *  overtime_rate)
+    gross_pay = normal_pay + total_overtime
+
+    print("Your normal wages is {} and you are being paid more {} for overtime work".format(normal_pay, total_overtime))
+    print("Your gross pay is", gross_pay)
