@@ -109,5 +109,26 @@
 # user_input()
 
 
-# Exercise 5 take two inputs and swap the first char at both and output one string
+# Exercise 5 replace all instances with "€"
 # -------------------->
+# def user_input():
+#     user_value = input("Enter first string\n")
+#     result = user_value.replace(user_value[0], "€")
+#
+#     print(result)
+#
+# user_input()
+
+
+# Exercise 6 replace second char in a string
+# -------------------->
+# def user_input():
+#     user_value = input("Enter first string\n")
+#     result = user_value.replace(user_value[1], "")
+#
+#     print(result)
+#
+# user_input()
+
+
+
