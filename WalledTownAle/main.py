@@ -52,8 +52,8 @@ street = "4, Elderwood Park, Borrenmanna Road"
 town = "Ballintemple"
 county = "Cork"
 print(f"{'':>50}{'Walled Town Ale'}")
-print(f"{'Invoice No:':<20}{invoice}".rjust(99))
-print(f"{'Date:':<20}{date}".rjust(100))
+print(f"{'':>70}{'Invoice No:':<20}{invoice}")
+print(f"{'':>70}{'Date:':<20}{date}")
 print("")
 print(f"{'Company Name:':<15}{name}")
 print(f"{'Address:':<15}{street}\n{'':<15}{town}\n{'':<15}{county}")
@@ -61,8 +61,21 @@ print("\nSales Details:\n")
 butchersPaleAleName = "Butchers' Pale Ale:"
 farriersIpaName = "Farriers' Ipa:"
 gatehouseBrownAleName = "Gatehouse Brown Ale:"
-print(f"{butchersPaleAleName:<50}{'12'}")
-print(f"{farriersIpaName:<50}{10}")
-print(f"{gatehouseBrownAleName:<50}{9}")
+print(f"{butchersPaleAleName:<50}{9:<40}{11}")
+print(f"{farriersIpaName:<50}{9:<40}{12}")
+print(f"{gatehouseBrownAleName:<50}{9:<40}{12}\n")
+boldLine = "\u2501" * 18
+print(boldLine.rjust(100))
+print(f"{'':<70}{'Subtotal:':<20}{12}")
 
+spaceRacks = 1
+if spaceRacks > 0:
+    print("\nSurcharge:")
+    print(f"{'Rack spaces unused:':<50}{spaceRacks:<40}{'120'}")
 
+discount = 1
+if discount > 0:
+    print("\nDiscount:")
+    print(f"{butchersPaleAleName:<50}{discount}")
+    print(f"{farriersIpaName:<50}{discount}")
+    print(f"{gatehouseBrownAleName:<50}{discount}")
