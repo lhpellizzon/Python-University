@@ -31,50 +31,54 @@ if checkRackSpaces < 15:
 butchersBarrelPriceTotal = round(butchersUnits * 125.50, 3)
 butchersBarrelUnitsDiscount = math.floor(butchersUnits / 10) * 10
 butchersBarrelDiscountPrice = round(butchersBarrelUnitsDiscount * 10, 2)
-# butchersBarrelTotalAfterDiscount = round(butchersBarrelPriceTotal - butchersBarrelDiscountPrice, 2)
 
 # -- Check discount Farriers' IPA-- #
 farriersBarrelPriceTotal = round(farriersUnits * 105.90, 2)
 farriersBarrelUnitsDiscount = math.floor(farriersUnits / 12) * 12
 farriersBarrelDiscountPrice = round(farriersBarrelUnitsDiscount * 8.40, 2)
-# farriersBarrelTotalAfterDiscount = round(farriersBarrelPriceTotal - farriersBarrelDiscountPrice, 2)
 
 # -- Check discount Gatehouse Brown Ale-- #
 gatehouseBarrelPriceTotal = round(gatehouseUnits * 132.35, 2)
 gatehouseBarrelUnitsDiscount = math.floor(gatehouseUnits / 9) * 9
 gatehouseBarrelDiscountPrice = round(gatehouseBarrelUnitsDiscount * 11.65, 2)
-# gatehouseBarrelTotalAfterDiscount = round(gatehouseBarrelPriceTotal - gatehouseBarrelDiscountPrice, 2)
-
 
 subtotal = round(butchersBarrelPriceTotal + farriersBarrelPriceTotal + gatehouseBarrelPriceTotal, 2)
 totalDiscount = round(butchersBarrelDiscountPrice + farriersBarrelDiscountPrice + gatehouseBarrelDiscountPrice, 2)
 
-
 # --- PRINT RECEIPT --- #
 boldLine = "\u2501" * 18
-
-print(f"{'':>50}{'Walled Town Ale'}")
-print(f"{'':>70}{'Invoice No:':<20}{companyInvoiceNo}")
-print(f"{'':>70}{'Date:':<20}{actualDate}")
-print("")
-print(f"{'Company Name:':<20}{companyName}")
-print(f"{'Address:':<20}{street}\n{'':<20}{eircode}\n{'':<20}{county}")
-print("\nSales Details:\n")
 butchersPaleAleName = "Butchers' Pale Ale:"
 farriersIpaName = "Farriers' Ipa:"
 gatehouseBrownAleName = "Gatehouse Brown Ale:"
+
+# --- Receipt Title --- #
+print(f"{'':>50}{'Walled Town Ale'}")
+
+# --- Invoice No and Date --- #
+print(f"{'':>70}{'Invoice No:':<20}{companyInvoiceNo}")
+print(f"{'':>70}{'Date:':<20}{actualDate}\n")
+
+# --- Company Name & Address --- #
+print(f"{'Company Name:':<20}{companyName}")
+print(f"{'Address:':<20}{street}\n{'':<20}{eircode}\n{'':<20}{county}")
+
+# --- Sales Details --- #
+# --- Each Barrel / Each Barrel Units / Each Barrel Full Price --- #
+print("\nSales Details:\n")
 print(f"{butchersPaleAleName:<50}{butchersUnits:<40}€{butchersBarrelPriceTotal:.2f}")
 print(f"{farriersIpaName:<50}{farriersUnits:<40}€{farriersBarrelPriceTotal:.2f}")
 print(f"{gatehouseBrownAleName:<50}{gatehouseUnits:<40}€{gatehouseBarrelPriceTotal:.2f}\n")
-
 print(boldLine.rjust(100))
 print(f"{'':<70}{'Subtotal:':<20}€{subtotal:.2f}")
 
-
+# --- Surcharge --- #
+# --- Print Space Racks Unused if there is some / Surcharge Price --- #
 if checkRackSpaces < 15:
     print("\nSurcharge:")
     print(f"{'Rack spaces unused:':<50}{checkRackSpaces:<40}€{surcharge:.2f}")
 
+# --- Barrels Discount --- #
+# --- Display Each Barrel Unit For Total Discount / Display Discount Price Per Barrel Type  --- #
 if totalDiscount > 0:
     print("\nDiscount:")
 
@@ -87,6 +91,6 @@ if farriersBarrelDiscountPrice > 0:
 if gatehouseBarrelDiscountPrice > 0:
     print(f"{gatehouseBrownAleName:<50}{gatehouseBarrelUnitsDiscount:<40}€{gatehouseBarrelDiscountPrice:.2f}")
 
-
+# --- Total --- #
 print(boldLine.rjust(100))
 print(f"{'':<70}{'Total:':<20}€{(subtotal - totalDiscount + surcharge):.2f}")
