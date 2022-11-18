@@ -28,7 +28,7 @@ if checkRackSpaces < 15:
     surcharge = checkRackSpaces * 2
 
 # -- Check discount Butchers' Pale Ale-- #
-butchersBarrelPriceTotal = round(butchersUnits * 125.50, 3)
+butchersBarrelPriceTotal = round(butchersUnits * 125.50, 2)
 butchersBarrelUnitsDiscount = math.floor(butchersUnits / 10) * 10
 butchersBarrelDiscountPrice = round(butchersBarrelUnitsDiscount * 10, 2)
 
