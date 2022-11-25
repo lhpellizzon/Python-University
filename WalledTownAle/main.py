@@ -64,24 +64,24 @@ print(f"{'Address:':<20}{address1}\n{'':<20}{address2}\n{'':<20}{address3}")
 
 # --- Sales Details --- #
 # --- Each Barrel / Each Barrel Units / Each Barrel Full Price --- #
-
 butcherTotal = "€{:,.2f}".format(butchersBarrelPriceTotal)
 farriersTotal = "€{:,.2f}".format(farriersBarrelPriceTotal)
 gatehouseTotal = "€{:,.2f}".format(gatehouseBarrelPriceTotal)
-
+subtotalCharge = "€{:,.2f}".format(subtotal)
 
 print("\nSales Details:\n")
 print(f"{butchersPaleAleName}{butchersUnits:>36}{butcherTotal:>45}")
 print(f"{farriersIpaName}{farriersUnits:>41}{farriersTotal:>45}")
 print(f"{gatehouseBrownAleName}{gatehouseUnits:>35}{gatehouseTotal:>45}\n")
 print(boldLine.rjust(100))
-print(f"{'':<70}{'Subtotal:':<20}€{subtotal:.2f}")
+print(f"{'':<70}{'Subtotal:'}{subtotalCharge:>21}")
 
 # --- Surcharge --- #
 # --- Print Space Racks Unused if there is some / Surcharge Price --- #
 if checkRackSpaces < 15:
+    surchargePrice = "€{:,.2f}".format(surcharge)
     print("\nSurcharge:")
-    print(f"{'Rack spaces unused:':<50}{checkRackSpaces:<40}€{surcharge:.2f}")
+    print(f"{'Rack spaces unused:'}{checkRackSpaces:>36}{surchargePrice:>45}")
 
 # --- Barrels Discount --- #
 # --- Display Each Barrel Unit For Total Discount / Display Discount Price Per Barrel Type  --- #
