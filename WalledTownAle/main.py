@@ -89,14 +89,18 @@ if totalDiscount > 0:
     print("\nDiscount:")
 
 if butchersBarrelDiscountPrice > 0:
-    print(f"{butchersPaleAleName}{butchersBarrelUnitsDiscount:>35}€{butchersBarrelDiscountPrice:.2f}")
+    butchersBarrelDiscountPriceTotal = "€{:,.2f}".format(butchersBarrelDiscountPrice)
+    print(f"{butchersPaleAleName}{butchersBarrelUnitsDiscount:>36}{butchersBarrelDiscountPriceTotal:>45}")
 
 if farriersBarrelDiscountPrice > 0:
-    print(f"{farriersIpaName}{farriersBarrelUnitsDiscount:>40}€{farriersBarrelDiscountPrice:.2f}")
+    farriersBarrelDiscountPriceTotal = "€{:,.2f}".format(farriersBarrelDiscountPrice)
+    print(f"{farriersIpaName}{farriersBarrelUnitsDiscount:>41}{farriersBarrelDiscountPriceTotal:>45}")
 
 if gatehouseBarrelDiscountPrice > 0:
-    print(f"{gatehouseBrownAleName}{gatehouseBarrelUnitsDiscount:>34}€{gatehouseBarrelDiscountPrice:.2f}")
+    gatehouseBarrelDiscountPriceTotal = "€{:,.2f}".format(gatehouseBarrelDiscountPrice)
+    print(f"{gatehouseBrownAleName}{gatehouseBarrelUnitsDiscount:>35}{gatehouseBarrelDiscountPriceTotal:>45}")
 
 # --- Total --- #
 print(boldLine.rjust(100))
-print(f"{'':<70}{'Total:':<20}€{(subtotal - totalDiscount + surcharge):.2f}")
+orderTotal = "€{:,.2f}".format((subtotal - totalDiscount + surcharge))
+print(f"{'':<70}{'Total:'}{orderTotal:>24}")
