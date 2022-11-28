@@ -55,8 +55,8 @@ gatehouseBrownAleName = "Gatehouse Brown Ale:"
 print(f"{'':>50}{'Walled Town Ale'}")
 
 # --- Invoice No and Date --- #
-print(f"{'':>70}{'Invoice No:':<20}{companyInvoiceNo}")
-print(f"{'':>70}{'Date:':<20}{actualDate}\n")
+print(f"{'':>70}{'Invoice No:'}{companyInvoiceNo:>19}")
+print(f"{'':>70}{'Date:'}{actualDate:>25}\n")
 
 # --- Company Name & Address --- #
 print(f"{'Company Name:':<20}{companyName}")
