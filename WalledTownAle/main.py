@@ -63,12 +63,13 @@ print(f"{'Company Name:':<20}{companyName}")
 print(f"{'Address:':<20}{address1}\n{'':<20}{address2}\n{'':<20}{address3}")
 
 # --- Sales Details --- #
-# --- Each Barrel / Each Barrel Units / Each Barrel Full Price --- #
+# --- Formatting the prices (numbers) to Euro currency --- #
 butcherTotal = "€{:,.2f}".format(butchersBarrelPriceTotal)
 farriersTotal = "€{:,.2f}".format(farriersBarrelPriceTotal)
 gatehouseTotal = "€{:,.2f}".format(gatehouseBarrelPriceTotal)
 subtotalCharge = "€{:,.2f}".format(subtotal)
 
+# --- Each Barrel / Each Barrel Units / Each Barrel Full Price --- #
 print("\nSales Details:\n")
 print(f"{butchersPaleAleName}{butchersUnits:>36}{butcherTotal:>45}")
 print(f"{farriersIpaName}{farriersUnits:>41}{farriersTotal:>45}")
@@ -102,5 +103,6 @@ if gatehouseBarrelDiscountPrice > 0:
 
 # --- Total --- #
 print(boldLine.rjust(100))
+# --- Formatting the total order price to Euro currency --- #
 orderTotal = "€{:,.2f}".format((subtotal - totalDiscount + surcharge))
 print(f"{'':<70}{'Total:'}{orderTotal:>24}")
