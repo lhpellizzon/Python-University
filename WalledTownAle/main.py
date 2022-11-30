@@ -38,18 +38,18 @@ if checkRackSpaces < 15:
 
 # -- Check discount Butchers' Pale Ale-- #
 butchersBarrelPriceTotal = round(butchersUnits * 125.50, 2)
-butchersBarrelUnitsDiscount = math.floor(butchersUnits / 10)
-butchersBarrelDiscountPrice = round(butchersBarrelUnitsDiscount * 10, 2)
+butchersBarrelUnitsDiscount = math.floor(butchersUnits / 10) * 10
+butchersBarrelDiscountPrice = round(butchersBarrelUnitsDiscount * 10, 2) / 10
 
 # -- Check discount Farriers' IPA-- #
 farriersBarrelPriceTotal = round(farriersUnits * 105.90, 2)
-farriersBarrelUnitsDiscount = math.floor(farriersUnits / 12)
-farriersBarrelDiscountPrice = round(farriersBarrelUnitsDiscount * 8.40, 2)
+farriersBarrelUnitsDiscount = math.floor(farriersUnits / 12) * 12
+farriersBarrelDiscountPrice = round(farriersBarrelUnitsDiscount * 8.40, 2) / 12
 
 # -- Check discount Gatehouse Brown Ale-- #
 gatehouseBarrelPriceTotal = round(gatehouseUnits * 132.35, 2)
-gatehouseBarrelUnitsDiscount = math.floor(gatehouseUnits / 9)
-gatehouseBarrelDiscountPrice = round(gatehouseBarrelUnitsDiscount * 11.65, 2)
+gatehouseBarrelUnitsDiscount = math.floor(gatehouseUnits / 9) * 9
+gatehouseBarrelDiscountPrice = round(gatehouseBarrelUnitsDiscount * 11.65, 2) / 9
 
 subtotal = round(butchersBarrelPriceTotal + farriersBarrelPriceTotal + gatehouseBarrelPriceTotal, 2)
 totalDiscount = round(butchersBarrelDiscountPrice + farriersBarrelDiscountPrice + gatehouseBarrelDiscountPrice, 2)
