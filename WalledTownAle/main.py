@@ -1,3 +1,12 @@
+# -- @author Luis Henrique de Andrade Pellizzon
+
+# -- @description Walled Town Ale Software to generate a purchase receipt
+# describing the price of each product, any surcharge if applied,
+# any discount if applied, and the total price of the order
+
+# -- @released 30/11/2022
+
+
 import datetime
 import math
 
